@@ -1,0 +1,5 @@
+# Claude Code skills (installed locally, not part of the project source)
+.claude/skills/
+
+# macOS
+.DS_Store
