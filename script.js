@@ -99,21 +99,90 @@
     });
   }
 
-  /* ---------- Contact form (demo) ---------- */
-  var form = document.getElementById("contact-form");
-  var note = document.getElementById("form-note");
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      if (!form.checkValidity()) {
-        if (note) note.textContent = "Please fill in the required fields.";
-        form.reportValidity();
-        return;
-      }
-      var name = (document.getElementById("name") || {}).value || "there";
-      if (note) note.textContent = "Thanks, " + name + "! This is a demo form — wire it to your backend.";
-      form.reset();
+  /* ---------- Calendly scheduling widget ---------- */
+  // The booking link is set in index.html via window.CALENDLY_URL.
+  var embed = document.getElementById("calendly-embed");
+  var fallback = document.getElementById("calendly-fallback");
+  var fallbackLink = document.getElementById("calendly-link");
+  var calendlyUrl = (window.CALENDLY_URL || "").trim();
+  var calendlyLoaded = false;
+
+  // Build the embed URL with colors that match the active theme.
+  function calendlyEmbedUrl() {
+    var dark = root.getAttribute("data-theme") === "dark";
+    var colors = dark
+      ? "background_color=1C333C&text_color=F2F0EF&primary_color=3E8BA8"
+      : "background_color=FFFFFF&text_color=1B2A30&primary_color=245F73";
+    var sep = calendlyUrl.indexOf("?") > -1 ? "&" : "?";
+    return calendlyUrl + sep + colors + "&hide_gdpr_banner=1";
+  }
+
+  // (Re)render the inline widget — also used when the theme changes.
+  function renderCalendly() {
+    if (!embed || !window.Calendly || !calendlyUrl) return;
+    embed.innerHTML = "";
+    window.Calendly.initInlineWidget({
+      url: calendlyEmbedUrl(),
+      parentElement: embed
     });
+  }
+
+  function showFallback(message) {
+    if (!fallback) return;
+    fallback.hidden = false;
+    if (fallbackLink && calendlyUrl) fallbackLink.href = calendlyUrl;
+    if (message && embed) {
+      embed.innerHTML = '<p class="calendly-setup">' + message + "</p>";
+    }
+  }
+
+  // Lazily load Calendly's assets, then render.
+  function loadCalendly() {
+    if (calendlyLoaded || !embed) return;
+    calendlyLoaded = true;
+
+    if (!calendlyUrl || calendlyUrl.indexOf("your-name") > -1) {
+      showFallback(
+        "Set <code>window.CALENDLY_URL</code> in index.html to your Calendly link to show the booking calendar here."
+      );
+      return;
+    }
+
+    if (window.Calendly) { renderCalendly(); return; }
+
+    var css = document.createElement("link");
+    css.rel = "stylesheet";
+    css.href = "https://assets.calendly.com/assets/external/widget.css";
+    document.head.appendChild(css);
+
+    var script = document.createElement("script");
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
+    script.onload = renderCalendly;
+    script.onerror = function () {
+      showFallback("Couldn't load the scheduler.");
+    };
+    document.head.appendChild(script);
+  }
+
+  // Only load when the Contact panel is actually shown (it's a hidden tab).
+  function maybeLoadCalendly() {
+    var contact = document.getElementById("contact");
+    if (contact && contact.classList.contains("is-active")) loadCalendly();
+  }
+  maybeLoadCalendly();
+  menuLinks.forEach(function (link) {
+    if (link.getAttribute("data-tab") === "contact") {
+      link.addEventListener("click", maybeLoadCalendly);
+    }
+  });
+  window.addEventListener("hashchange", maybeLoadCalendly);
+
+  // Re-skin the widget when the user toggles light/dark.
+  if (window.MutationObserver && embed) {
+    new MutationObserver(function () {
+      if (calendlyLoaded && window.Calendly) renderCalendly();
+    }).observe(root, { attributes: true, attributeFilter: ["data-theme"] });
   }
 
   /* ---------- Footer year ---------- */

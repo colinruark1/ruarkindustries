@@ -7,7 +7,7 @@
   <title>Colin Ruark — AI Courses, Consulting & Work for Hire</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -57,10 +57,9 @@
       <div class="hero">
         <div class="hero-text">
           <p class="eyebrow">AI Courses · Consulting · Work for Hire</p>
-          <h1>Lorem ipsum dolor sit <span class="accent">amet</span> consectetur.</h1>
+          <h1>Let us handle your <span class="accent">online presence.</span></h1>
           <p class="lede">
-            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+            Upscaling your business in 2026 means having a digital presence. Our team is prepared to offer the tools necessary to provide a meaningful website to your team, highlighting exactly what you want consumers to know.
           </p>
           <div class="hero-actions">
             <a href="#courses" class="btn btn-primary" data-tab="courses">Explore Courses</a>
@@ -228,33 +227,20 @@
         <h2>Let's talk — lorem ipsum dolor sit amet.</h2>
         <p class="section-sub">Tell me about your project and I'll get back to you.</p>
       </div>
-      <form class="contact-form" id="contact-form" novalidate>
-        <div class="field">
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" placeholder="Jane Doe" required />
-        </div>
-        <div class="field">
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" placeholder="jane@example.com" required />
-        </div>
-        <div class="field">
-          <label for="topic">Topic</label>
-          <select id="topic" name="topic">
-            <option>Courses</option>
-            <option>Consulting</option>
-            <option>Work for Hire</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="field field-full">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" placeholder="Lorem ipsum dolor sit amet…" required></textarea>
-        </div>
-        <div class="field field-full">
-          <button type="submit" class="btn btn-primary">Send message</button>
-          <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
-        </div>
-      </form>
+      <!-- ===================================================================
+           Calendly scheduling widget
+           👉 Put YOUR Calendly link below (replace the placeholder URL).
+              Example: https://calendly.com/colin-ruark/30min
+           =================================================================== -->
+      <script>window.CALENDLY_URL = "https://calendly.com/colinruark1/30min";</script>
+
+      <div class="calendly-wrap">
+        <div id="calendly-embed" role="region" aria-label="Schedule an appointment"></div>
+        <p class="calendly-fallback" id="calendly-fallback" hidden>
+          Having trouble with the scheduler?
+          <a id="calendly-link" href="#" target="_blank" rel="noopener">Open the booking page in a new tab</a>.
+        </p>
+      </div>
     </section>
 
   </main>

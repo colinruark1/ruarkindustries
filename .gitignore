@@ -1,5 +1,13 @@
 # Claude Code skills (installed locally, not part of the project source)
 .claude/skills/
 
+# Secrets — never commit real credentials
+.env
+.env.local
+
+# Node
+node_modules/
+server/node_modules/
+
 # macOS
 .DS_Store
