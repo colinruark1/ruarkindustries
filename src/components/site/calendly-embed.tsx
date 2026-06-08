@@ -15,10 +15,10 @@ declare global {
 }
 
 /**
- * Lazily loads Calendly's widget the first time the Contact tab is shown, and
- * re-skins it to match the active theme. Ported from the original script.js.
+ * Loads Calendly's widget when the Contact route mounts, and re-skins it to
+ * match the active theme. Ported from the original script.js.
  */
-export function CalendlyEmbed({ active }: { active: boolean }) {
+export function CalendlyEmbed() {
   const embedRef = useRef<HTMLDivElement>(null);
   const fallbackRef = useRef<HTMLParagraphElement>(null);
   const fallbackLinkRef = useRef<HTMLAnchorElement>(null);
@@ -83,7 +83,7 @@ export function CalendlyEmbed({ active }: { active: boolean }) {
       document.head.appendChild(script);
     }
 
-    if (active) load();
+    load();
 
     // Re-skin the widget when the user toggles light/dark.
     const observer = new MutationObserver(() => {
@@ -92,7 +92,7 @@ export function CalendlyEmbed({ active }: { active: boolean }) {
     observer.observe(root, { attributes: true, attributeFilter: ["data-theme"] });
 
     return () => observer.disconnect();
-  }, [active]);
+  }, []);
 
   return (
     <div className="calendly-wrap">

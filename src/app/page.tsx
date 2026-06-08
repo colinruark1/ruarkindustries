@@ -1,12 +1,5 @@
-import { SiteApp } from "@/components/site-app";
+import { HomePanel } from "@/components/site/panels/home";
 
 export default function Page() {
-  return (
-    <>
-      <a className="skip-link" href="#main">
-        Skip to content
-      </a>
-      <SiteApp />
-    </>
-  );
+  return <HomePanel />;
 }

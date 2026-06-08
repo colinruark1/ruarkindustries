@@ -1,8 +1,8 @@
 import { Panel } from "../panel";
 
-export function AboutPanel({ active }: { active: boolean }) {
+export function AboutPanel() {
   return (
-    <Panel id="about" active={active}>
+    <Panel id="about">
       <div className="section-head">
         <p className="eyebrow">About</p>
         <h2>Lorem ipsum dolor sit amet consectetur adipiscing.</h2>

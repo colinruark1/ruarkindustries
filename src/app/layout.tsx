@@ -3,6 +3,8 @@ import { Fraunces } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import "./legacy.css";
+import { SiteHeader } from "@/components/site/site-header";
+import { TabLink } from "@/components/site/nav";
 
 // Display / heading face — variable weight, served from Google.
 const fraunces = Fraunces({
@@ -58,7 +60,25 @@ export default function RootLayout({
             __html: `(function(){try{var t=localStorage.getItem("cr-theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}document.documentElement.setAttribute("data-theme",t);}catch(e){}})();`,
           }}
         />
-        {children}
+
+        <a className="skip-link" href="#main">
+          Skip to content
+        </a>
+
+        <SiteHeader />
+
+        <main id="main">{children}</main>
+
+        <footer className="site-footer">
+          <p>
+            © {new Date().getFullYear()} Colin Ruark · Letting you run your
+            business.
+          </p>
+          <p className="footer-links">
+            <TabLink tab="home">Privacy Policy</TabLink>
+            <TabLink tab="courses">Terms and Conditions</TabLink>
+          </p>
+        </footer>
       </body>
     </html>
   );

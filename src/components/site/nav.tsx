@@ -1,6 +1,4 @@
-"use client";
-
-import { createContext, useContext } from "react";
+import Link from "next/link";
 import type { AnchorHTMLAttributes } from "react";
 
 export const TABS = [
@@ -14,41 +12,16 @@ export const TABS = [
 
 export type TabId = (typeof TABS)[number]["id"];
 
-type NavContextValue = {
-  active: TabId;
-  navigate: (tab: TabId) => void;
-};
-
-const NavContext = createContext<NavContextValue | null>(null);
-
-export const NavProvider = NavContext.Provider;
-
-export function useNav() {
-  const ctx = useContext(NavContext);
-  if (!ctx) throw new Error("useNav must be used within NavProvider");
-  return ctx;
-}
+/** Map a tab id to its route ("home" is the index route). */
+export const tabHref = (tab: TabId) => (tab === "home" ? "/" : `/${tab}`);
 
 /**
- * Anchor that switches tabs in-app (mirrors the original [data-tab] links:
- * it keeps the #hash for deep-linking but intercepts the click).
+ * Internal link to a section route. Uses next/link for client-side navigation
+ * with clean paths (e.g. /about, not /#about).
  */
 export function TabLink({
   tab,
-  onClick,
   ...props
-}: { tab: TabId } & AnchorHTMLAttributes<HTMLAnchorElement>) {
-  const { navigate } = useNav();
-  return (
-    <a
-      href={`#${tab}`}
-      data-tab={tab}
-      onClick={(e) => {
-        e.preventDefault();
-        navigate(tab);
-        onClick?.(e);
-      }}
-      {...props}
-    />
-  );
+}: { tab: TabId } & Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href">) {
+  return <Link href={tabHref(tab)} {...props} />;
 }

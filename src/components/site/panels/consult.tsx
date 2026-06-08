@@ -1,9 +1,9 @@
 import { Panel } from "../panel";
 import { TabLink } from "../nav";
 
-export function ConsultPanel({ active }: { active: boolean }) {
+export function ConsultPanel() {
   return (
-    <Panel id="consult" active={active}>
+    <Panel id="consult">
       <div className="section-head">
         <p className="eyebrow">Consult</p>
         <h2>Consulting, lorem ipsum dolor sit amet consectetur.</h2>

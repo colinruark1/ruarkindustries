@@ -1,15 +1,14 @@
 import { Panel } from "../panel";
 import { TabLink } from "../nav";
 
-export function CoursesPanel({ active }: { active: boolean }) {
+export function CoursesPanel() {
   return (
-    <Panel id="courses" active={active}>
+    <Panel id="courses">
       <div className="section-head">
         <p className="eyebrow">Courses</p>
-        <h2>AI courses, lorem ipsum dolor sit amet.</h2>
+        <h2>Nothing to see here yet.</h2>
         <p className="section-sub">
-          Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore.
+          Have a question about coding or AI? Leave it _here_ or _schedule a consultaiton_!
         </p>
       </div>
       <div className="card-grid">

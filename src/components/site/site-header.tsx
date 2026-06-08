@@ -1,6 +1,8 @@
 "use client";
 
-import { TABS, TabLink, useNav } from "./nav";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { TABS, TabLink, tabHref } from "./nav";
 
 const THEME_KEY = "cr-theme";
 
@@ -60,14 +62,14 @@ function toggleTheme(button: HTMLElement) {
   });
 }
 
-export function SiteHeader({
-  menuOpen,
-  onToggleMenu,
-}: {
-  menuOpen: boolean;
-  onToggleMenu: () => void;
-}) {
-  const { active } = useNav();
+export function SiteHeader() {
+  const pathname = usePathname();
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  // Close the mobile menu whenever the route changes.
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
 
   return (
     <header className="site-header">
@@ -90,7 +92,7 @@ export function SiteHeader({
           aria-expanded={menuOpen}
           aria-controls="nav-menu"
           aria-label="Toggle navigation"
-          onClick={onToggleMenu}
+          onClick={() => setMenuOpen((o) => !o)}
         >
           <span></span>
           <span></span>
@@ -102,7 +104,7 @@ export function SiteHeader({
             <li key={t.id}>
               <TabLink
                 tab={t.id}
-                className={`nav-link${active === t.id ? " is-active" : ""}`}
+                className={`nav-link${pathname === tabHref(t.id) ? " is-active" : ""}`}
               >
                 {t.label}
               </TabLink>

@@ -1,9 +1,9 @@
 import { Panel } from "../panel";
 import { PortfolioCardstack } from "../portfolio-cardstack";
 
-export function PortfolioPanel({ active }: { active: boolean }) {
+export function PortfolioPanel() {
   return (
-    <Panel id="portfolio" active={active}>
+    <Panel id="portfolio">
       <div className="section-head">
         <p className="eyebrow">Portfolio</p>
         <h2>Work for hire, lorem ipsum dolor sit amet.</h2>

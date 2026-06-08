@@ -1,9 +1,9 @@
 import { Panel } from "../panel";
 import { CalendlyEmbed } from "../calendly-embed";
 
-export function ContactPanel({ active }: { active: boolean }) {
+export function ContactPanel() {
   return (
-    <Panel id="contact" active={active}>
+    <Panel id="contact">
       <div className="section-head">
         <p className="eyebrow">Contact</p>
         <h2>Let&apos;s talk — lorem ipsum dolor sit amet.</h2>
@@ -11,7 +11,7 @@ export function ContactPanel({ active }: { active: boolean }) {
           Tell me about your project and I&apos;ll get back to you.
         </p>
       </div>
-      <CalendlyEmbed active={active} />
+      <CalendlyEmbed />
     </Panel>
   );
 }

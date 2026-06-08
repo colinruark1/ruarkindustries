@@ -1,9 +1,9 @@
 import { Panel } from "../panel";
 import { TabLink } from "../nav";
 
-export function HomePanel({ active }: { active: boolean }) {
+export function HomePanel() {
   return (
-    <Panel id="home" active={active}>
+    <Panel id="home">
       <div className="hero">
         <div className="hero-text">
           <p className="eyebrow">AI Courses · Consulting · Work for Hire</p>
