@@ -431,6 +431,10 @@ main { max-width: 1140px; margin: 0 auto; padding: 0 1.5rem; }
 #calendly-embed {
   min-width: 320px; height: 720px;
 }
+/* Calendly's widget.js injects its own bouncing-dots placeholder spinner above
+   the iframe; the embedded scheduling page already shows a centered loader, so
+   hide the redundant outer one to avoid a double loading wheel. */
+#calendly-embed .calendly-spinner { display: none; }
 .calendly-setup {
   margin: 0; padding: 2rem 1.5rem; text-align: center;
   color: var(--text-soft); font-size: .95rem; line-height: 1.6;
