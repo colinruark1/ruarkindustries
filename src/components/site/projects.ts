@@ -24,5 +24,4 @@ export const PROJECTS: Project[] = [
   { slug: "slammedu", title: "Slammedu", meta: "Full Stack Development · 2026", img: "/images/Slammedu.png", variant: "c" },
   { slug: "oc", title: "Ocean Cleaners", meta: "Rapid Prototyping · 2025", img: "/images/Ocean%20Cleaners.jpeg", variant: "a" },
   { slug: "challenge", title: "Nittany AI Challenge", meta: "Analytics · 2026", img: "/images/Challenge.jpeg", variant: "b" },
-  { slug: "ips", title: "Invent Penn State", meta: "Retrieval-Augmented Generation · 2023", img: "", variant: "c" },
 ];
