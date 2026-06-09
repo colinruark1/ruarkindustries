@@ -10,19 +10,12 @@ export default function Page() {
     <ProjectPage
       title="Ocean Cleaners"
       eyebrow="Rapid Prototyping · 2025"
-      lead="TODO: Big header description for Ocean Cleaners — what it is and the headline of your involvement."
+      lead="Team Lead on Ocean Cleaners, a Hack-a-thon project designed to connect efforts to clean up our oceans."
       img="/images/Ocean%20Cleaners.jpeg"
       imgAlt="Ocean Cleaners"
-      testimonial={{
-        name: "TODO: Client name",
-        role: "TODO: Role, organization",
-        photo: "", // TODO: "/images/their-photo.jpg"
-        quote: "TODO: Paste the client's quote here.",
-      }}
     >
       <p>
-        TODO: One-paragraph description of the project — what you built/led, how
-        you did it, and the outcome.
+        Over the course of 24 hours, my team worked diligently to create a fun social media app that connected others in an effort to do something good for the environment. I had a lot of fun creating the client-facing design, not as much fun managing API keys on a database at 5 AM.
       </p>
     </ProjectPage>
   );

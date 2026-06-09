@@ -16,7 +16,7 @@ export default function Page() {
       testimonial={{
         name: "Jackson Gasperack",
         role: "Computational Data Science Student at Penn State University",
-        photo: "/images/JacksonGasperack.jpeg", // TODO: "/images/their-photo.jpg"
+        photo: "/images/JacksonGasperack.jpeg",
         quote: "In November 2025, Colin Ruark approached me with the idea to form a team for the Nittany AI Challenge with a project dealing with Search and Rescue concepts. I am so thankful for this experience because it broadened my skillset and taught me so much.",
       }}
     >

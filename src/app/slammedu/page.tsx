@@ -16,7 +16,7 @@ export default function Page() {
       testimonial={{
         name: "Niklas Restrepo",
         role: "Co-founder of Slammedu and Circuit",
-        photo: "/images/NiklasRestrepo.jpeg", // TODO: "/images/their-photo.jpg"
+        photo: "/images/NiklasRestrepo.jpeg",
         quote: "None of this would have been possible without our incredible team at SlammedU. Huge thank you to Colin Ruark, Ana Birleanu, and Elizabeth Faulkner for all of your hard work, dedication, and belief in what we are building. Excited for what's ahead.",
       }}
     >

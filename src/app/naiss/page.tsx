@@ -16,7 +16,7 @@ export default function Page() {
       testimonial={{
         name: "Kevin McGovern",
         role: "Cybersecurity Services at Arcova",
-        photo: "/images/KevinMcGovern.jpeg", // TODO: "/images/their-photo.jpg"
+        photo: "/images/KevinMcGovern.jpeg",
         quote: "Colin and the entire NAISS team are a shining example of how our NG Leaders are here with us ready to evolve a secure and relevant digital universe that improves life for all of us to enjoy this century. ",
       }}
     >

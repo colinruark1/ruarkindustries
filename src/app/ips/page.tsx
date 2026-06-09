@@ -10,7 +10,7 @@ export default function Page() {
     <ProjectPage
       title="Invent Penn State"
       eyebrow="Retrieval-Augmented Generation · 2023"
-      lead="TODO: Big header description for Invent Penn State — what it is and the headline of your involvement."
+      lead="Full Stack Developer for Invent Penn State via Nittany AI Advance"
       imgAlt="Invent Penn State"
     >
       <p>
