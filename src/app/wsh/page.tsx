@@ -10,19 +10,12 @@ export default function Page() {
     <ProjectPage
       title="West Shore Home"
       eyebrow="Automated Workflows · 2026"
-      lead="TODO: Big header description for West Shore Home — what it is and the headline of your involvement."
+      lead="Applied A.I. Engineer for West Shore Home"
       img="/images/WSH.jpg"
       imgAlt="West Shore Home"
-      testimonial={{
-        name: "TODO: Client name",
-        role: "TODO: Role, organization",
-        photo: "", // TODO: "/images/their-photo.jpg"
-        quote: "TODO: Paste the client's quote here.",
-      }}
     >
       <p>
-        TODO: One-paragraph description of the project — what you built/led, how
-        you did it, and the outcome.
+        This was my first leap into the world of A.I.-focused Automation, using Agents and Code to create consistent, meaningful results out of business data. Working at West Shore Home is like the dream for turning unstructured data into actionable business insights.
       </p>
     </ProjectPage>
   );
