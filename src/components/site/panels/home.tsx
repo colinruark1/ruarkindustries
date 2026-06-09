@@ -17,77 +17,52 @@ export function HomePanel() {
             know.
           </p>
           <div className="hero-actions">
-            <TabLink tab="courses" className="btn btn-primary">
-              Explore Courses
+            <TabLink tab="portfolio" className="btn btn-primary">
+              Explore Portfolio
             </TabLink>
-            <TabLink tab="consult" className="btn btn-ghost">
-              Book a Consult
+            <TabLink tab="contact" className="btn btn-ghost">
+              Get in Touch
             </TabLink>
           </div>
           <ul className="hero-stats">
             <li>
-              <strong>12+</strong>
-              <span>Lorem cohorts</span>
+              <strong>6+</strong>
+              <span>Major Projects</span>
             </li>
             <li>
-              <strong>240</strong>
-              <span>Ipsum learners</span>
+              <strong>Real</strong>
+              <span>Market ROI</span>
             </li>
             <li>
-              <strong>98%</strong>
-              <span>Dolor sit rating</span>
+              <strong>3.73</strong>
+              <span>Penn State GPA</span>
             </li>
           </ul>
-        </div>
-        <div className="hero-card" aria-hidden="true">
-          <div className="swatch-stack">
-            <span className="swatch" style={{ background: "#F2F0EF" }}>
-              #F2F0EF
-            </span>
-            <span className="swatch" style={{ background: "#BBBDBC" }}>
-              #BBBDBC
-            </span>
-            <span
-              className="swatch swatch-dark"
-              style={{ background: "#245F73" }}
-            >
-              #245F73
-            </span>
-            <span
-              className="swatch swatch-dark"
-              style={{ background: "#733E24" }}
-            >
-              #733E24
-            </span>
-          </div>
         </div>
       </div>
 
       <div className="feature-grid">
-        <article className="feature">
+        <TabLink tab="courses" className="feature">
           <span className="feature-num">01</span>
           <h3>Courses</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do
-            eiusmod tempor.
+            Learn about what it's like to build a website or a coding project from the ground up, and how to leverage AI.
           </p>
-        </article>
-        <article className="feature">
+        </TabLink>
+        <TabLink tab="contact" className="feature">
           <span className="feature-num">02</span>
           <h3>Consulting</h3>
           <p>
-            Ut enim ad minim veniam quis nostrud exercitation ullamco laboris
-            nisi.
+            Answer a specific question, get feedback, or get pointed in the right direction about approaches.
           </p>
-        </article>
-        <article className="feature">
+        </TabLink>
+        <TabLink tab="contact" className="feature">
           <span className="feature-num">03</span>
           <h3>Work for Hire</h3>
           <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum.
+            Free Quotas on pricing for me to build your website or project.
           </p>
-        </article>
+        </TabLink>
       </div>
     </Panel>
   );

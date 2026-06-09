@@ -37,8 +37,8 @@ const libre = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Colin Ruark — AI Courses, Consulting & Work for Hire",
-  description: "Personal site for AI Courses, Consultations, and Work for Hire.",
+  title: "Ruark Industries - Transparency, Dedication, Outcomes",
+  description: "Personal site for AI Courses, Consultations, and Builds.",
 };
 
 export default function RootLayout({

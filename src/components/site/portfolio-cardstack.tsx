@@ -1,17 +1,8 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-
-/* Edit PROJECTS to add work. `img` is an optional image URL — when empty, the
-   card falls back to a palette gradient (variant "a" | "b" | "c"). */
-const PROJECTS = [
-  { title: "Lorem Project", meta: "AI workflow · 2025", href: "", img: "", variant: "a" },
-  { title: "Ipsum Platform", meta: "LLM tooling · 2025", href: "", img: "", variant: "b" },
-  { title: "Dolor System", meta: "Automation · 2024", href: "", img: "", variant: "c" },
-  { title: "Amet Engine", meta: "RAG pipeline · 2024", href: "", img: "", variant: "a" },
-  { title: "Sit Dashboard", meta: "Analytics · 2024", href: "", img: "", variant: "b" },
-  { title: "Consectetur App", meta: "Mobile · 2023", href: "", img: "", variant: "c" },
-];
+import Link from "next/link";
+import { PROJECTS } from "./projects";
 
 const MAX_VISIBLE = 4; // cards rendered behind the front one
 const SWIPE_THRESHOLD = 60; // px of drag needed to commit a swipe
@@ -223,17 +214,13 @@ export function PortfolioCardstack() {
             <div className="cardstack-info">
               <h3>{project.title}</h3>
               <p>{project.meta}</p>
-              {project.href ? (
-                <a
-                  href={project.href}
-                  target="_blank"
-                  rel="noopener"
-                  className="cardstack-link"
-                  onPointerDown={(e) => e.stopPropagation()}
-                >
-                  View project
-                </a>
-              ) : null}
+              <Link
+                href={`/${project.slug}`}
+                className="cardstack-link"
+                onPointerDown={(e) => e.stopPropagation()}
+              >
+                View case study →
+              </Link>
             </div>
           </li>
         ))}

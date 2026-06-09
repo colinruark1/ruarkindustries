@@ -32,6 +32,8 @@ export function CalendlyEmbed() {
 
     function embedUrl() {
       const dark = root.getAttribute("data-theme") === "dark";
+      // Dark mode matches the page background (--lg-bg) so the extra iframe
+      // height blends in; light mode uses white for a clean booking surface.
       const colors = dark
         ? "background_color=1C333C&text_color=F2F0EF&primary_color=3E8BA8"
         : "background_color=FFFFFF&text_color=1B2A30&primary_color=245F73";
