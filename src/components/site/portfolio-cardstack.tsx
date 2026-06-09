@@ -105,6 +105,10 @@ export function PortfolioCardstack() {
     function onPointerDown(e: PointerEvent) {
       const front = cardEls.current[order[0]];
       if (!front || !front.contains(e.target as Node)) return;
+      // Don't start a drag when pressing a link/button (e.g. "View case study").
+      // The native listener here fires before React's stopPropagation, so without
+      // this guard the pointer capture below would swallow the link's click.
+      if ((e.target as Element).closest("a, button")) return;
       dragging = true;
       startY = e.clientY;
       frontEl = front;
