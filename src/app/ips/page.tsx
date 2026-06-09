@@ -12,16 +12,9 @@ export default function Page() {
       eyebrow="Retrieval-Augmented Generation · 2023"
       lead="TODO: Big header description for Invent Penn State — what it is and the headline of your involvement."
       imgAlt="Invent Penn State"
-      testimonial={{
-        name: "TODO: Client name",
-        role: "TODO: Role, organization",
-        photo: "", // TODO: "/images/their-photo.jpg"
-        quote: "TODO: Paste the client's quote here.",
-      }}
     >
       <p>
-        TODO: One-paragraph description of the project — what you built/led, how
-        you did it, and the outcome.
+        Invent Penn State was one of the first business-sponsored projects I've ever tackled as part of my journey to become a software engineer. Key insights include Web Development, Database Management, Retrieval Augmented Generation, and most importantly, Teams Communications.
       </p>
     </ProjectPage>
   );

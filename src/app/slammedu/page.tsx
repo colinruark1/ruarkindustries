@@ -10,19 +10,18 @@ export default function Page() {
     <ProjectPage
       title="Slammedu"
       eyebrow="Full Stack Development · 2026"
-      lead="TODO: Big header description for Slammedu — what it is and the headline of your involvement."
+      lead="Software Development Lead at Slammedu and Circuit"
       img="/images/Slammedu.png"
       imgAlt="Slammedu"
       testimonial={{
-        name: "TODO: Client name",
-        role: "TODO: Role, organization",
-        photo: "", // TODO: "/images/their-photo.jpg"
-        quote: "TODO: Paste the client's quote here.",
+        name: "Niklas Restrepo",
+        role: "Co-founder of Slammedu and Circuit",
+        photo: "/images/NiklasRestrepo.jpeg", // TODO: "/images/their-photo.jpg"
+        quote: "None of this would have been possible without our incredible team at SlammedU. Huge thank you to Colin Ruark, Ana Birleanu, and Elizabeth Faulkner for all of your hard work, dedication, and belief in what we are building. Excited for what's ahead.",
       }}
     >
       <p>
-        TODO: One-paragraph description of the project — what you built/led, how
-        you did it, and the outcome.
+        I was extremely curious when Niklas came to me with a Student Engagement Website he had been working on. I decided to say yes to helping out with the technical components of this project, and has shown me a world when it comes to Rapid Development with tools such as Supabase, Vercel, Stripe, and others, and is part of what led me to begin freelance work.
       </p>
     </ProjectPage>
   );
