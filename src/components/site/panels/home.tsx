@@ -6,12 +6,12 @@ export function HomePanel() {
     <Panel id="home">
       <div className="hero">
         <div className="hero-text">
-          <p className="eyebrow">AI Courses · Consulting · Work for Hire</p>
+          <p className="eyebrow">AI Courses · Consulting · Commissions</p>
           <h1>
             Let us handle your <span className="accent">online presence.</span>
           </h1>
           <p className="lede">
-            Upscaling your business in 2026 means having a digital presence. Our
+            Upscaling your business in 2026 means having a digital signature. Our
             team is prepared to offer the tools necessary to provide a meaningful
             website to your team, highlighting exactly what you want consumers to
             know.
@@ -32,10 +32,6 @@ export function HomePanel() {
             <li>
               <strong>Real</strong>
               <span>Market ROI</span>
-            </li>
-            <li>
-              <strong>3.73</strong>
-              <span>Penn State GPA</span>
             </li>
           </ul>
         </div>
@@ -58,9 +54,9 @@ export function HomePanel() {
         </TabLink>
         <TabLink tab="contact" className="feature">
           <span className="feature-num">03</span>
-          <h3>Work for Hire</h3>
+          <h3>Commissions</h3>
           <p>
-            Free Quotas on pricing for me to build your website or project.
+            Free Quotes on pricing for me to build your website or project.
           </p>
         </TabLink>
       </div>
