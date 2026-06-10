@@ -26,7 +26,7 @@ export function HomePanel() {
           </div>
           <ul className="hero-stats">
             <li>
-              <strong>6+</strong>
+              <strong>5+</strong>
               <span>Major Projects</span>
             </li>
             <li>
