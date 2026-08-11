@@ -149,7 +149,7 @@ a { color: inherit; text-decoration: none; }
 ::view-transition-old(root) { z-index: 1; }
 ::view-transition-new(root) { z-index: 2; }
 
-.nav-toggle { display: none; flex-direction: column; gap: 4px; }
+.nav-toggle { display: none; flex-direction: column; justify-content: center; align-items: center; gap: 4px; }
 .nav-toggle span { width: 18px; height: 2px; background: var(--lg-text); border-radius: 2px; }
 
 
