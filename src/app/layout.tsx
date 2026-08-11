@@ -50,6 +50,9 @@ export default function RootLayout({
     <html
       lang="en"
       data-theme="light"
+      // The no-flash script below rewrites data-theme before hydration, so the
+      // server-rendered value is expected to mismatch on this element.
+      suppressHydrationWarning
       className={`${fraunces.variable} ${lora.variable} ${libre.variable} h-full antialiased`}
     >
       <body>
