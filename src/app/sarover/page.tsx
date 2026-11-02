@@ -13,7 +13,7 @@ export default function Page() {
       title="SaRover"
       eyebrow="E-Commerce Website · Live Site"
       lead="An online store for a premium women's activewear and luxury loungewear brand"
-      img="/images/SaRover.jpeg"
+      img="/images/Sarover.png"
       imgAlt="Four models wearing SaRover's pink activewear set, from the SaRover homepage"
       liveUrl="https://shopsarover.com"
     >
