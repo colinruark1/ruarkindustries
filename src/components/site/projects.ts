@@ -26,7 +26,7 @@ export const PROJECTS: Project[] = [
   { slug: "wsh", title: "West Shore Home", meta: "Automated Workflows · 2026", img: "/images/WSH.jpg", variant: "b" },
   { slug: "slammedu", title: "Slammedu", meta: "Full Stack Development · 2026", img: "/images/Slammedu.png", variant: "c", summary: "I lead software development for this student engagement platform, built with Supabase, Vercel, and Stripe." },
   { slug: "meridian", title: "Meridian", meta: "AI Strategy & Implementation · 2026", img: "/images/Meridian.jpeg", variant: "a" },
-  { slug: "sarover", title: "SaRover", meta: "E-Commerce Website · Live Site", img: "/images/SaRover.jpeg", variant: "b" },
+  { slug: "sarover", title: "SaRover", meta: "E-Commerce Website · Live Site", img: "/images/Sarover.png", variant: "b" },
   { slug: "meganfaith", title: "Megan Faith Music", meta: "Artist Website · Live Site", img: "/images/MeganFaith.jpeg", variant: "c" },
   { slug: "oc", title: "Ocean Cleaners", meta: "Rapid Prototyping · 2025", img: "/images/Ocean%20Cleaners.jpeg", variant: "a" },
   { slug: "challenge", title: "Nittany AI Challenge", meta: "Analytics · 2026", img: "/images/Challenge.jpeg", variant: "b" },
