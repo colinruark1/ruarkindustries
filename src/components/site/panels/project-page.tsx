@@ -34,6 +34,7 @@ export function ProjectPage({
   lead,
   img,
   imgAlt,
+  liveUrl,
   testimonial,
   children,
 }: {
@@ -45,6 +46,8 @@ export function ProjectPage({
   /** Cover image — the same picture used on the card stack. */
   img?: string;
   imgAlt?: string;
+  /** Public site for the project, shown as a link under the lead. */
+  liveUrl?: string;
   testimonial?: ProjectTestimonial;
   /** The one-paragraph description shown beneath the image. */
   children: ReactNode;
@@ -60,6 +63,16 @@ export function ProjectPage({
         <h2>{title}</h2>
         <p className="project-eyebrow">{eyebrow}</p>
         <p className="section-sub">{lead}</p>
+        {liveUrl ? (
+          <a
+            href={liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary project-live"
+          >
+            Visit live site
+          </a>
+        ) : null}
       </div>
 
       <div className="project-layout">

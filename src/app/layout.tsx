@@ -1,19 +1,11 @@
 import type { Metadata } from "next";
-import { Fraunces } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import "./legacy.css";
 import { SiteHeader } from "@/components/site/site-header";
 import { TabLink } from "@/components/site/nav";
 
-// Display / heading face — variable weight, served from Google.
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-});
-
-// Body face — self-hosted from src/fonts.
+// Site-wide face — self-hosted from src/fonts.
 const lora = localFont({
   variable: "--font-lora",
   src: [
@@ -26,19 +18,9 @@ const lora = localFont({
   ],
 });
 
-// Logo lockup face.
-const libre = localFont({
-  variable: "--font-libre",
-  src: [
-    { path: "../fonts/LibreBaskerville-Regular.ttf", weight: "400", style: "normal" },
-    { path: "../fonts/LibreBaskerville-SemiBold.ttf", weight: "600", style: "normal" },
-    { path: "../fonts/LibreBaskerville-Bold.ttf", weight: "700", style: "normal" },
-  ],
-});
-
 export const metadata: Metadata = {
   title: "Ruark Industries - Transparency, Dedication, Outcomes",
-  description: "Personal site for AI Courses, Consultations, and Builds.",
+  description: "Personal site for AI Consultations and Builds.",
 };
 
 export default function RootLayout({
@@ -53,7 +35,7 @@ export default function RootLayout({
       // The no-flash script below rewrites data-theme before hydration, so the
       // server-rendered value is expected to mismatch on this element.
       suppressHydrationWarning
-      className={`${fraunces.variable} ${lora.variable} ${libre.variable} h-full antialiased`}
+      className={`${lora.variable} h-full antialiased`}
     >
       <body>
         {/* No-flash theme init — runs before paint, mirrors the original
@@ -79,7 +61,7 @@ export default function RootLayout({
           </p>
           <p className="footer-links">
             <TabLink tab="home">Privacy Policy</TabLink>
-            <TabLink tab="courses">Terms and Conditions</TabLink>
+            <TabLink tab="home">Terms and Conditions</TabLink>
           </p>
         </footer>
       </body>

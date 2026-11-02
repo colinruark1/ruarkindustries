@@ -1,6 +1,6 @@
 # Ruark Industries
 
-Personal site for Colin Ruark — AI Courses, Consulting & Work for Hire.
+Personal site for Colin Ruark — AI Consulting & Work for Hire.
 
 Built with **Next.js 16** (App Router), **React 19**, **Tailwind CSS v4**, and
 **shadcn/ui**, with **Magic UI** components available via the shadcn registry.
@@ -23,8 +23,8 @@ npm run lint     # eslint
 ```
 src/
   app/
-    layout.tsx        Root layout: fonts (Fraunces / Lora / Libre Baskerville),
-                      no-flash theme init, global CSS imports.
+    layout.tsx        Root layout: font (Lora), no-flash theme init, global CSS
+                      imports.
     page.tsx          Renders <SiteApp/>.
     globals.css       Tailwind v4 theme + shadcn design tokens (brand palette).
     legacy.css        Original site styles, scoped into @layer components with
@@ -35,14 +35,13 @@ src/
       nav.tsx         Tab navigation context + <TabLink>.
       panel.tsx       Tab-panel wrapper.
       site-header.tsx Nav, mobile menu, theme toggle (View Transitions wipe).
-      panels/         Home, About, Courses, Consult, Portfolio, Contact.
+      panels/         Home, About, Portfolio, Contact.
       portfolio-cardstack.tsx   Draggable stacked-cards showcase.
-      calendly-embed.tsx        Lazy-loaded, theme-aware Calendly widget.
     ui/               shadcn + Magic UI components (button, aurora-text,
                       dot-pattern, animated-shiny-text, …).
 public/
   images/             Hero photos + logos.
-src/fonts/            Self-hosted Lora & Libre Baskerville.
+src/fonts/            Self-hosted Lora.
 ```
 
 ## Theming
@@ -65,8 +64,3 @@ npx shadcn@latest add <component>                                   # shadcn/ui
 > Note: Magic UI's animated components require the `motion` package
 > (`npm install motion`), and shadcn's current "nova" preset uses Base UI —
 > polymorphic components use the `render` prop, not `asChild`.
-
-## Booking
-
-The Contact tab embeds Calendly (`CALENDLY_URL` in
-[src/components/site/calendly-embed.tsx](src/components/site/calendly-embed.tsx)).
