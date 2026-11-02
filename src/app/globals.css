@@ -12,8 +12,8 @@
 
   /* Type families */
   --font-sans: var(--font-lora);
-  --font-heading: var(--font-fraunces);
-  --font-logo: var(--font-libre);
+  --font-heading: var(--font-lora);
+  --font-logo: var(--font-lora);
 
   /* Brand accents beyond shadcn's semantic set */
   --color-brand: var(--brand);
